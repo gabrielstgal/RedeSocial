@@ -1,0 +1,483 @@
+{
+  "info": {
+    "_postman_id": "ca3f5607-5b2b-42d2-9325-4cdf567cd44c",
+    "name": "Minha Rede Social",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38653530"
+  },
+  "item": [
+    {
+      "name": "Cadastrar Usuario",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nomeCompleto\": \"São Paulo Futebol Clube\",\r\n  \"email\": \"SaoPauloFc@cwi.com.br\",\r\n  \"apelido\": \"O maior do brasil\",\r\n  \"dataNascimento\": \"1930-01-25\",\r\n  \"senha\": \"123456\",\r\n  \"imagemPerfil\": \"UrlSpfc\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/usuario",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuario"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login Usuario",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\r\n  \"email\": \"SaoPauloFc@cwi.com.br\",\r\n  \"senha\": \"1256\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Solicitar Amizade",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJyZWRlLXNvY2lhbC1zcGZjIiwic3ViIjoiVHJlemUgRnV0ZWJvbCBDbHViZSIsImV4cCI6MTc1OTUyODA5NCwiaWF0IjoxNzU5NTI3NDk0LCJlbWFpbCI6IlRyZXplZmNAY3dpLmNvbS5iciJ9.MIcFRu6Cz6SMEZRvCWJlwaBULVypIPABKAmrpKBtak7P6ryoWWo87UumsR1jtYA5WHTvWx615UK1a_SZ6pcxZ6z8oCZY0U4L35Ij8lXlSWSHL7Av0PZZLyTBqvDLNBEnjyXgb5y96XqAzMDCHI3TiaYoYgw3t5XoxUWo-2-GnATVeNVeK4NWjTzoGndgHMx1sN6Iw4SXnk5JnZP64D0GL9G0VjJl6U_felPZHd5EMy6eHJonR0ch1dxZ8U_XBR5_o7Oeyrp9eN_yokqHlz1ThKIk9339C08uvDH1i8a_y6T6P8iuzlIKXyEWVeoN6QsFRxwFEQAl-ygokNeazlAuuQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n"
+        },
+        "url": {
+          "raw": "http://localhost:8080/usuario/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuario",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Aceitar Solicitação",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJyZWRlLXNvY2lhbC1zcGZjIiwic3ViIjoiVHJlemUgRnV0ZWJvbCBDbHViZSIsImV4cCI6MTc1OTUyODA5NCwiaWF0IjoxNzU5NTI3NDk0LCJlbWFpbCI6IlRyZXplZmNAY3dpLmNvbS5iciJ9.MIcFRu6Cz6SMEZRvCWJlwaBULVypIPABKAmrpKBtak7P6ryoWWo87UumsR1jtYA5WHTvWx615UK1a_SZ6pcxZ6z8oCZY0U4L35Ij8lXlSWSHL7Av0PZZLyTBqvDLNBEnjyXgb5y96XqAzMDCHI3TiaYoYgw3t5XoxUWo-2-GnATVeNVeK4NWjTzoGndgHMx1sN6Iw4SXnk5JnZP64D0GL9G0VjJl6U_felPZHd5EMy6eHJonR0ch1dxZ8U_XBR5_o7Oeyrp9eN_yokqHlz1ThKIk9339C08uvDH1i8a_y6T6P8iuzlIKXyEWVeoN6QsFRxwFEQAl-ygokNeazlAuuQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/usuario/aceitar/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuario",
+            "aceitar",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Realizar Postagem",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJyZWRlLXNvY2lhbC1zcGZjIiwic3ViIjoiU8OjbyBQYXVsbyBGdXRlYm9sIENsdWJlIiwiZXhwIjoxNzU5NTk5NDU4LCJpYXQiOjE3NTk1OTg4NTgsImVtYWlsIjoiU2FvUGF1bG9GY0Bjd2kuY29tLmJyIn0.m_u1CLf5rjVGOW2ywJ1MOntnjYI_n_jGpibVgD9-ZcN99yG1q8pp4853y4rWSNfVfj1kWXPY0o6mwqLYAi155NJDfCWK3xflz5_7CypSPyKdYgroZvbSIoYPDG47jRqRwJ7-JiWln1qcEfrstGpDvyiOazYxGb-Vt-64O9Dp-lRD9dt8iamqv5xtxDWjL56eyc8V1OIjbiJDJ6p-W6y_h2DBb6tsRdX8EoCABLhXCkKAkIu9yV2uRwazQeIieRtiZzSGVFXpryFFQo4BEYlPHuA_elllQRY3C4lCaZSmlI_7ZHRmBTGZgMfe6fs6XOj29Qrtx3tCoXtSj4oaHt-Kkw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"conteudo\": \"São paulo é eliminado da Copa Liberdatores Com uma derrota para a LDU no morumbi.\",\r\n    \"publico\": \"true\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/postagens",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "postagens"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Curtir postagem",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJyZWRlLXNvY2lhbC1zcGZjIiwic3ViIjoiU8OjbyBQYXVsbyBGdXRlYm9sIENsdWJlIiwiZXhwIjoxNzU5NTk5NDU4LCJpYXQiOjE3NTk1OTg4NTgsImVtYWlsIjoiU2FvUGF1bG9GY0Bjd2kuY29tLmJyIn0.m_u1CLf5rjVGOW2ywJ1MOntnjYI_n_jGpibVgD9-ZcN99yG1q8pp4853y4rWSNfVfj1kWXPY0o6mwqLYAi155NJDfCWK3xflz5_7CypSPyKdYgroZvbSIoYPDG47jRqRwJ7-JiWln1qcEfrstGpDvyiOazYxGb-Vt-64O9Dp-lRD9dt8iamqv5xtxDWjL56eyc8V1OIjbiJDJ6p-W6y_h2DBb6tsRdX8EoCABLhXCkKAkIu9yV2uRwazQeIieRtiZzSGVFXpryFFQo4BEYlPHuA_elllQRY3C4lCaZSmlI_7ZHRmBTGZgMfe6fs6XOj29Qrtx3tCoXtSj4oaHt-Kkw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"conteudo\": \"São paulo é eliminado da Copa Liberdatores Com uma derrota para a LDU no morumbi.\",\r\n    \"publico\": \"true\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/postagens/1/curtir",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "postagens",
+            "1",
+            "curtir"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Realizer Comentario",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJyZWRlLXNvY2lhbC1zcGZjIiwic3ViIjoiQ21hcGluZW5zZSBGdXRlYm9sIENsdWJlIiwiZXhwIjoxNzU5NjQxMDg2LCJpYXQiOjE3NTk2NDA0ODYsImVtYWlsIjoiQ2FtcGluZW5zZUZjQGN3aS5jb20uYnIifQ.vF3u3S6g5J_61u43ftV1tQ1aZk8tJpHdo8yhf62sRknkXf7CoQb-tpNhQVVBEs06su7b7FrDxnPbqDBNX0C8XhiUQT0lDEeK0qPGQL0fbfMxvurZ_TwAMxoWdxD4Z_SOb14k0l126XlW9DumxOrdcLHpdIZkr6H8MzRznGE1hvc7eCRPvwxUEx2em9WiyaVkGXFWCeVQkDHSfvAl9qku9CsfwwnCr-L5akAPAtDcoqPjGt6fb7ekm0zzXz_x9Zl_-52K8IrTQcRVVb5tKMZ2lkelhZTJvLchdX1DOEcnCcqnk47uw8tgCOwahKLOcaAQTNQyyqtAZwHymOOOTSwlkg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"conteudo\": \"Acho que o palmeiras não vai conseguir vencer esse fim de semana\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/postagens/4/comentarios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "postagens",
+            "4",
+            "comentarios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Exibir Dados de Usuario Logado",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJyZWRlLXNvY2lhbC1zcGZjIiwic3ViIjoiU8OjbyBQYXVsbyBGdXRlYm9sIENsdWJlIiwiZXhwIjoxNzU5NTI3MDYyLCJpYXQiOjE3NTk1MjY0NjIsImVtYWlsIjoiU2FvUGF1bG9GY0Bjd2kuY29tLmJyIn0.NMqoWz5JRYeF87k9xzZ3HFQ6rS0zJ1vkJktREBTUcNkdowvKyJP3FIUQYWH3VQJn--qWTWoj2-7FkWOfNwZOsR7U1BJpDky1lX7LCetfSvMKqGVeedbfoZUZFcFUP9ot-HWxDDRcT339sdvm685AxYNtzLlgghpouuGTPlNlHkTAe3ifjd7vTDXuVLP9ea78qheA0X1nvYJ8EhtjIFiUjOOs1-hc6uw4duhcDfIbTCebof3AaHtCwW0n4ixxMKa9eFZBzofw2c4Jl4UX0fo8rfwj5VdwRH3IAc0cKvj5E-OvkUcKfrk3oemh7BijIEYGiEeoi-vZDxYfuZt26NJxHg",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:8080/usuario/me",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuario",
+            "me"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Lista de amigos",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Pedidos de amizade",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJyZWRlLXNvY2lhbC1zcGZjIiwic3ViIjoiVHJlemUgRnV0ZWJvbCBDbHViZSIsImV4cCI6MTc1OTUyODA5NCwiaWF0IjoxNzU5NTI3NDk0LCJlbWFpbCI6IlRyZXplZmNAY3dpLmNvbS5iciJ9.MIcFRu6Cz6SMEZRvCWJlwaBULVypIPABKAmrpKBtak7P6ryoWWo87UumsR1jtYA5WHTvWx615UK1a_SZ6pcxZ6z8oCZY0U4L35Ij8lXlSWSHL7Av0PZZLyTBqvDLNBEnjyXgb5y96XqAzMDCHI3TiaYoYgw3t5XoxUWo-2-GnATVeNVeK4NWjTzoGndgHMx1sN6Iw4SXnk5JnZP64D0GL9G0VjJl6U_felPZHd5EMy6eHJonR0ch1dxZ8U_XBR5_o7Oeyrp9eN_yokqHlz1ThKIk9339C08uvDH1i8a_y6T6P8iuzlIKXyEWVeoN6QsFRxwFEQAl-ygokNeazlAuuQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/usuario/solicitacoes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuario",
+            "solicitacoes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Remover Curtida",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar Contatos",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJyZWRlLXNvY2lhbC1zcGZjIiwic3ViIjoiQ21hcGluZW5zZSBGdXRlYm9sIENsdWJlIiwiZXhwIjoxNzU5NjQxNTA3LCJpYXQiOjE3NTk2NDA5MDcsImVtYWlsIjoiQ2FtcGluZW5zZUZjQGN3aS5jb20uYnIifQ.HiOGPWZ1Nz3Iq3KcX4GfInuHXZLVO9P-kbN-LiIv8ZGz_LgDXe5kzeeRkgtmmB7fpGsI-tkvX8vLz-WYwj8WEpB-ssBxd4IA3cN3weZqehFEZ4hK7gym2KxKJJZWDlWd1ILSqH6X_HSTT673_6oUruFCii0JCAOdKIBPE07N001q_EHHcBDvxtTtrz9AXf5gzxoZfAFqmAW9gvGawAkDgh0jPHFpsZ5nVgj2gc18dXZXnb_cBVaSG5FCIV0RH8WfM5pQrDubxIDKibcSXonYIpYEleYArbdENTsehrMEFvl6PTmkfaDbJQIE98oxgYsiy6FeV01hwQxdlGXKQvYNog",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/usuario?text=f",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuario"
+          ],
+          "query": [
+            {
+              "key": "text",
+              "value": "f"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listar Postagens",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Alterar Permissao do post",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Atualizar Usuario",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJyZWRlLXNvY2lhbC1zcGZjIiwic3ViIjoiR3JlbWlvIEZ1dGVib2wgQ2x1YmUiLCJleHAiOjE3NTk1NTQ3MzMsImlhdCI6MTc1OTU1NDEzMywiZW1haWwiOiJHcmVtaW9GY0Bjd2kuY29tLmJyIn0.FERj9TQfx7CmfnHy9KfIVb-j7aZ9cP1KP-uoYtQkbqwZNwzd_Lb1pUV3xUhfw7asyndc71ak_hASkMvlfR6D-cyPboIYn-LSIqN7NnOSMIWJ_erSiaJMhq9gcILfYb8seJL2dOlv6crtHtV8ptLJYvyQreq3XBhS5U9d3CIO5LmwGZOltLoXdYA36rR-AyRw6__1akZWEmyLIF8kZZu9p5r30G0dY6Va9RX98CuAacFA3cH_kWanPKnRsJHMBrVrP429Lo3-15GPqd8Y1Yk89cxi5hSMTaf3CowJFavxTT3jZVxM0mLD6-FHQHSDlNXruH3uwMuvyi5doagciRoR8w",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nomeCompleto\": \"Gremio\",\r\n    \"apelido\": \"Tricolor\",\r\n    \"imagemPerfil\": \"GremioURLFOTO\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/usuario/me",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuario",
+            "me"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Rejeitar Pedido de Amizade",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJyZWRlLXNvY2lhbC1zcGZjIiwic3ViIjoiRmxhbWVuZ28gRnV0ZWJvbCBDbHViZSIsImV4cCI6MTc1OTU1NTc3MSwiaWF0IjoxNzU5NTU1MTcxLCJlbWFpbCI6IkZsYW1lbmdvRkNAY3dpLmNvbS5iciJ9.ZxgDHL1aqMOT3PR_QEzx-PpFy3ix0ZHPFejhuqAO7Fa0KRybjv79Eoe8aWO7-GKauwZyxcEv3sldL5kKO0cDn9vuehdA2rIPubwWALBUj7-0gYIkJ6mt4kKP1XNn-tkdj5oiY8LS3Ga9GdkhrP2LsrOAxGJlPTSXIEongRO7Pk6Za39ypsxVVxj2yytODvqoBJlIO1EEpt-b1FG6ui6Ib66GpGMPmotqhQiYa9J_QtVORymEG5dWJFL5PQaGqn4c6YtrO_eMMI8GPiDbxdwVyGhGCI6egvz3nhD-JoZ6zab0ioI_cy9MWmEHjSzDJ0JQY57zoEgtVCjyS52qtkfwlA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nomeCompleto\": \"Gremio\",\r\n    \"apelido\": \"Tricolor\",\r\n    \"imagemPerfil\": \"GremioURLFOTO\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/usuario/rejeitar/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuario",
+            "rejeitar",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Desfazer Amizade",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJyZWRlLXNvY2lhbC1zcGZjIiwic3ViIjoiU8OjbyBQYXVsbyBGdXRlYm9sIENsdWJlIiwiZXhwIjoxNzU5NTU2NjAyLCJpYXQiOjE3NTk1NTYwMDIsImVtYWlsIjoiU2FvUGF1bG9GY0Bjd2kuY29tLmJyIn0.hwwuGskNS8zrFFO1HbF_xgmgEbZ30oyl6-5sBMAUq6pJTGC5qclOsJo5IGatTPMH7uM0Nt1L5FjXEUNdMiFQClO4W8vPGf_nOScGYkEaX1XPalOXZwiQQecT9sCl9y21Oo2NhOU3qiIJ1uyGiNAQ-z1x9XI3_64PmnEvzaINW3w-pMC5OV1kSrvL-jnCJSkDEERB12tGXoNpT8JKzCLOa1_qWc2pAVX9vTn63f-JR5J1_EbfIoG7W6aqI-WSB_YnboSTCdcB5y8cFyAK8v3JiWsHAdak3Y3Pgyu2k88iuJcCvxGRtRCnjMmtHHdby8LvtQy4jiuCkBNfalyo6ur74g",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/usuario/amigos/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "usuario",
+            "amigos",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
